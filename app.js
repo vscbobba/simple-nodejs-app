@@ -1,29 +1,14 @@
 // app.js
 const express = require('express');
 const app = express();
-const port = 8080;  // You can change the port if needed
+const port = 8080; // Set port to 8080
 
-// Middleware to log the request
-app.use((req, res, next) => {
-  console.log(`${req.method} request to ${req.url}`);
-  next(); // Proceed to the next middleware
-});
-
-// Simple route that returns a greeting message
+// Simple route to test the server
 app.get('/', (req, res) => {
-  res.send('Hello from your monolithic Node.js application!');
+  res.send('Hello from Node.js!');
 });
 
-// Example API endpoint
-app.get('/api/data', (req, res) => {
-  res.json({
-    message: 'Here is some sample data.',
-    status: 'success',
-    timestamp: new Date(),
-  });
-});
-
-// Start the server and listen on the defined port
-app.listen(port, () => {
-  console.log(`App is running at http://localhost:${port}`);
+// Start the server and listen on all network interfaces (0.0.0.0)
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${port}`);
 });
