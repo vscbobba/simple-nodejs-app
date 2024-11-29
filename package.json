@@ -1,0 +1,14 @@
+{
+    "name": "monolithic-app",
+    "version": "1.0.0",
+    "description": "A simple monolithic application for AWS deployment",
+    "main": "app.js",
+    "dependencies": {
+      "express": "^4.17.1"  // Express.js framework for handling HTTP requests
+    },
+    "scripts": {
+      "start": "node app.js"  // The command to start the application
+    },
+    "author": "",
+    "license": "ISC"
+  }  
