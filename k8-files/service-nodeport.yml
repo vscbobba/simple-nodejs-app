@@ -11,3 +11,11 @@ spec:
       targetPort: 8080  # Port on the container
       nodePort: 30000
   type: NodePort
+
+#controlplane $ curl http://10.99.203.206:80     (svc IP)
+#               Hello from Node.js!
+
+#controlplane $ curl http://localhost:30000      (node/server IP also u can use instead of localhost)
+#               Hello from Node.js!
+
+# even it is same from any node/server in cluster
